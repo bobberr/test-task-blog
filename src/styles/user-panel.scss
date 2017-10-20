@@ -1,0 +1,140 @@
+.user-panel {
+    position: relative;
+    padding: 20px;
+    background: $defWhite;
+    border-radius: 5px;   
+    box-shadow: 0 0 4px 0 $defShadow;
+    margin-bottom: 10px;
+    &__link-button {
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        top: 11px;
+        right: 12px;
+        border: none;
+        outline: none;
+        background: url('./img/folder.png') no-repeat center;
+    }
+    &__thumbnail {
+        width: 70px;
+        height: auto;
+        margin-right: 19px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 19px;
+    }
+    &__name {
+        color: $defBlue;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0 10px 0 0;
+    }
+    &__location {
+        color: $defLightBlue;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 0;
+    }
+    &__like {
+        width: 12px;
+        height: 12px;
+        border: none;
+        outline: none;
+        background: url('./img/heart.png') no-repeat center;
+        transition: background .2s;
+        &:hover {
+            background: url('./img/heart-hover.png') no-repeat center;
+        }
+    }
+    &__stats {
+        justify-content: space-around;
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        width: 100%;
+        margin: 0 35px 0 0;
+    }
+    &__item {
+        width: 57px;
+    }
+    &__stat-number {
+        color: $defOrange;
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0;
+    }
+    &__stat-name {
+        color: $defLightBlue;
+        font-size: 10px;
+        margin: 0;
+    }
+    &__follow {
+        border: 2px solid transparent;
+        background: $defOrange;
+        color: $defWhite;
+        padding: 14px 27px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        transition: all .3s;
+        outline: none;
+        letter-spacing: 4.2px;
+        &:hover {
+            border-color: $defOrange;
+            color: $defOrange;
+            background: $defWhite;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .user-panel {
+        &__follow {
+            letter-spacing: 1px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .user-panel {
+        padding-top: 0;
+        &__info {
+            flex-direction: column;
+        }
+        &__thumbnail {
+            margin: -48px 0 16px 0;
+        }
+        &__name-location {
+            align-items: center;
+        }
+        &__like {
+            position: absolute;
+            top: 6px;
+            right: -20px;
+        }
+        &__position-container {
+            position: relative;
+        }
+        &__name {
+            margin: 0;
+        }
+        &__stats {
+            flex-direction: column;
+        }
+        &__list {
+            justify-content: space-between;
+            margin: 0 0 21px 0;
+        }
+        &__follow {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.add-comment {
+    margin: 20px 20px 0 25px;
+    &__text-input {
+        border: none;
+        border-bottom: 2px solid rgba(219,224,232,1);
+        outline: none;
+        font-size: 18px;
+        line-height: 22px;
+        padding: 5px 0;
+        position: relative;
+        margin-bottom: 10px;
+        &:focus::-webkit-input-placeholder {
+            font-size: 13px;
+            opacity: .5;
+        }
+        &::-webkit-input-placeholder {
+            color: $defLightBlue;
+            transition: all .3s
+        }
+    }
+    &__form {
+        overflow: hidden;
+    }
+    &__container {
+        max-height: 150px;
+        transition: max-height .3s;
+        overflow: hidden;
+    }
+    &__submit {
+        align-self: center;
+        border: 2px solid $defLightBlue;
+        border-radius: 100px;
+        background: transparent;
+        color: $defLightBlue;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        outline: none;
+        font-weight: bold;
+        transition: all .3s;
+        margin: 10px 0 20px 0;
+        &:hover {
+            background: $defLightBlue;
+            color: $defWhite;
+        }
+    }
+}
